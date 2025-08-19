@@ -1,0 +1,294 @@
+/* =============================================== */
+/* CSS Kustom untuk Merdeka Kripto */
+/* =============================================== */
+
+/* --- Reset & Pengaturan Dasar --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #343A40; /* Abu tua */
+    background-color: #F8F9FA; /* Off-white */
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* --- Header / Navigasi --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(248, 249, 250, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-container img {
+    height: 3rem; /* 48px */
+    margin-right: 0.5rem;
+}
+
+.logo-container h1 {
+    font-size: 1.5rem; /* 24px */
+    color: #800000; /* Merah Marun */
+}
+
+.nav-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #343A40;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #800000;
+}
+
+.tombol {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.tombol-utama {
+    background-color: #800000;
+    color: white;
+}
+
+.tombol-utama:hover {
+    background-color: #660000;
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-color: #111; /* Fallback color */
+    background-image: url('images/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    color: #e0e0e0;
+}
+
+.tombol-hero-utama {
+    background-color: #DC143C; /* Merah lebih cerah */
+    color: white;
+    padding: 0.75rem 2rem;
+    border: 2px solid transparent;
+}
+.tombol-hero-utama:hover {
+    background-color: #b81232;
+    border-color: white;
+}
+
+.tombol-hero-sekunder {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.75rem 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.tombol-hero-sekunder:hover {
+     background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Section Umum --- */
+.section {
+    padding: 5rem 0;
+}
+.section-putih {
+    background-color: white;
+}
+.section-judul {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.section-subjudul {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 4rem;
+}
+
+/* --- Kontak Section --- */
+.form-kontak {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-grup {
+    margin-bottom: 1.5rem;
+}
+.form-grup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+.form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: #800000;
+    box-shadow: 0 0 0 2px rgba(128, 0, 0, 0.25);
+}
+.form-submit {
+    text-align: center;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: #343A40;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+}
+.footer .logo-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.footer .social-icons a {
+    color: white;
+    margin: 0 0.75rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.footer .social-icons a:hover {
+    opacity: 1;
+}
+.footer .copyright {
+    color: #adb5bd;
+    margin-top: 2rem;
+}
+.footer .disclaimer {
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+}
+
+/* --- CSS untuk Profil (Visi Misi) --- */
+.profil-konten {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+.profil-item h4 {
+    font-size: 1.5rem;
+    color: #800000;
+    margin-bottom: 1rem;
+}
+
+/* --- CSS untuk Roadmap --- */
+.roadmap-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    border-left: 3px solid #800000;
+}
+.roadmap-item {
+    position: relative;
+    margin-bottom: 3rem;
+}
+.roadmap-dot {
+    position: absolute;
+    left: -2.75rem;
+    top: 0.25rem;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 4px solid #800000;
+    border-radius: 50%;
+}
+.roadmap-item:last-child {
+    margin-bottom: 0;
+}
+.roadmap-content h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+/* --- CSS untuk Ikon Sosial Media di Footer --- */
+.social-icons {
+    margin-bottom: 2rem;
+}
+.social-icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
