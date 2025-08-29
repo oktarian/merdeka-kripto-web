@@ -32,7 +32,7 @@
         {{-- ====================================================================== --}}
         <section class="section hero">
             <video autoplay loop muted playsinline class="video-background">
-                <source src="{{ asset('videos/vid1.mp4') }}" type="video/mp4">
+                <source src="{{ asset('videos/vidvs.mp4') }}" type="video/mp4">
             </video>
             <div class="container">
                 <h1 class="section-title text-glow">THE BEAUTY OF AKAZA</h1>
