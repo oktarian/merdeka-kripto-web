@@ -14,7 +14,7 @@
 <body>
 
     <header class="header">
-        adawdasdajjd
+        
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo">THE AKAZA RETURN</a>
