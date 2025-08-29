@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKAZA - The Dawn of Sakaz</title>
+    <title>Inosuke Hashibira - King of The Mountain</title>
     
     {{-- Font Awesome untuk Ikon --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -16,7 +16,7 @@
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">THE AKAZA RETURN</a>
+                <a href="#" class="logo">BOSS INOSUKE</a>
                 <div class="nav-icons">
                     <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
                     <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
@@ -32,20 +32,20 @@
         {{-- ====================================================================== --}}
         <section class="section hero">
             <video autoplay loop muted playsinline class="video-background">
-                <source src="{{ asset('videos/vidvs.mp4') }}" type="video/mp4">
+                <source src="{{ asset('videos/vid1.mp4') }}" type="video/mp4">
             </video>
             <div class="container">
-                <h1 class="section-title text-glow">THE BEAUTY OF AKAZA</h1>
+                <h1 class="section-title text-glow">KING OF THE MOUNTAIN INOSUKE</h1>
                 <p class="section-text">
-                    One of the last of his kind, akaza doesn't whisper, it roars. A battle cry against the centralized shadows, a call for the pack to rise.
+                        "The Beast Breathing Swordsman"
                 </p>
-                <button class="copy-button">COPY CA $AKZ</button>
+                <button class="copy-button">COPY CA $INO</button>
             </div>
         </section>
 
         <div class="section-divider">
             <div class="divider-line"></div>
-            <img src="{{ asset('images/salju.png') }}" alt="Divider" class="divider-icon">
+            <img src="{{ asset('images/Inosuke.png') }}" alt="Divider" class="divider-icon">
         </div>
 
         {{-- ====================================================================== --}}
@@ -53,21 +53,15 @@
         {{-- ====================================================================== --}}
         <section class="section section-video section-spirit">
              <video autoplay loop muted playsinline class="video-background">
-                <source src="{{ asset('videos/vid4.mp4') }}" type="video/mp4">
+                <source src="{{ asset('videos/vid2.mp4') }}" type="video/mp4">
             </video>
             <div class="container">
-                <h2 class="section-title text-glow">THE SPIRIT BEHIND THE BLADE</h2>
+                <h2 class="section-title text-glow">RAW INSTINCT BEHIND THE EDGE</h2>
                 <p class="section-text">
-                    This isn't just a digital token; it carries a sharpened edge. A symbol of resilience for the outcasts, the lone wolves. Join the chaos and cut through it. Holders aren't just investors; they are hunters. And the hunt never ends.
-                </p>
+"This isn’t just another coin — it’s a blade forged in chaos. A mark of resilience for the outcasts, the lone wolves, and the fearless. To hold it is not to invest, but to hunt. To sharpen your edge and carve your own path. Here, there are no followers — only hunters. And the hunt never ends."                </p>
             </div>
         </section>
         
-        <!-- <div class="section-divider">
-            <div class="divider-line"></div>
-            <img src="{{ asset('images/salju.png') }}" alt="Divider" class="divider-icon">
-        </div> -->
-
         {{-- ====================================================================== --}}
         {{-- PATH SECTION --}}
         {{-- ====================================================================== --}}
@@ -77,23 +71,22 @@
             </video>
             <div class="container">
                 <div class="info-box">
-                    <h3 class="section-title" style="font-size: 1.5rem;">HOW THE PATH UNFOLDS</h3>
-                    <p style="color: var(--text-dark);">
-                        The journey is a hunt. We don't bow to corporate chains. It's a maelstrom. akaza strikes from the shadows. The horde gathers. The dance begins. Wild movements, where prices clash and fortunes are forged in the battle. How we choose to party is akaza.
-                    </p>
+                    <h3 class="section-title info-box-title">RAMPAGE AHEAD</h3>
+                    <p class="info-box-text">
+The path is raw, untamed. No chains, no rules — only instinct. Inosuke charges headfirst into chaos, blades flashing, defying order with wild fury. The clash is savage, the rhythm primal. This is not a march — it’s a rampage. The way forward is simple: fight, survive, conquer.                    </p>
                 </div>
             </div>
         </section>
 
         <div class="section-divider">
             <div class="divider-line"></div>
-            <img src="{{ asset('images/salju.png') }}" alt="Divider" class="divider-icon">
+            <img src="{{ asset('images/Inosuke.png') }}" alt="Divider" class="divider-icon">
         </div>
 
         {{-- ====================================================================== --}}
         {{-- HOW TO BUY SECTION --}}
         {{-- ====================================================================== --}}
-        <section class="section">
+           <section class="section">
             <div class="sakura-container">
                 <div class="sakura-petal"></div>
                 <div class="sakura-petal"></div>
@@ -108,30 +101,35 @@
             </div>
             <div class="container">
                 <h2 class="section-title text-glow">HOW TO BUY $AKZ</h2>
-                <ul class="how-to-buy-list">
-                    <li class="how-to-buy-item">
-                        <span class="number">1</span>
-                        <p>Create a wallet. Download Phantom or your wallet of choice from the app store or google play store for free.</p>
-                    </li>
-                    <li class="how-to-buy-item">
-                        <span class="number">2</span>
-                        <p>Get some SOL. Have SOL in your wallet to swap to $AKZ. If you don’t have any SOL, you can buy directly on Phantom.</p>
-                    </li>
-                    <li class="how-to-buy-item">
-                        <span class="number">3</span>
-                        <p>Go to Raydium. Connect to Raydium. Go to Raydium in google chrome or on the browser inside your Phantom app.</p>
-                    </li>
-                     <li class="how-to-buy-item">
-                        <span class="number">4</span>
-                        <p>Swap SOL for $AKZ. We have ZERO taxes so you don’t need to worry about buying with a specific slippage.</p>
-                    </li>
-                </ul>
+                <div class="how-to-buy-content">
+                    <div class="how-to-buy-image-container">
+                        <img src="{{ asset('images/inoRemov.png') }}" alt="Character" class="how-to-buy-image">
+                    </div>
+                    <ul class="how-to-buy-list">
+                        <li class="how-to-buy-item">
+                            <span class="number">1</span>
+                            <p>Create a wallet. Download Phantom or your wallet of choice from the app store or google play store for free.</p>
+                        </li>
+                        <li class="how-to-buy-item">
+                            <span class="number">2</span>
+                            <p>Get some SOL. Have SOL in your wallet to swap to $AKZ. If you don’t have any SOL, you can buy directly on Phantom.</p>
+                        </li>
+                        <li class="how-to-buy-item">
+                            <span class="number">3</span>
+                            <p>Go to Raydium. Connect to Raydium. Go to Raydium in google chrome or on the browser inside your Phantom app.</p>
+                        </li>
+                         <li class="how-to-buy-item">
+                            <span class="number">4</span>
+                            <p>Swap SOL for $AKZ. We have ZERO taxes so you don’t need to worry about buying with a specific slippage.</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <div class="section-divider">
             <div class="divider-line"></div>
-            <img src="{{ asset('images/salju.png') }}" alt="Divider" class="divider-icon">
+            <img src="{{ asset('images/Inosuke.png') }}" alt="Divider" class="divider-icon">
         </div>
 
         {{-- ====================================================================== --}}
@@ -155,9 +153,12 @@
     {{-- ====================================================================== --}}
     <footer class="footer">
         <div class="container">
-            <p class="copyright">&copy; 2025 AKAZA</p>
+            <p class="copyright">&copy; 2025 HASHIBIRA INOSUKE</p>
         </div>
     </footer>
 
 </body>
 </html>
+
+ 
+=
