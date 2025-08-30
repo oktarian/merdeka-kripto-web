@@ -36,7 +36,7 @@
                 <source src="{{ asset('videos/vidvs.mp4') }}" type="video/mp4">
             </video>
             <div class="container">
-                <h1 class="section-title text-glow">THE BEAUTY OF AKAZA</h1>
+                <h1 class="section-title text-glow">THE AKAZA RETURNS</h1>
                 <p class="section-text">
                     One of the last of his kind, akaza doesn't whisper, it roars. A battle cry against the centralized shadows, a call for the pack to rise.
                 </p>
@@ -143,7 +143,7 @@
                 <source src="{{ asset('videos/vid5.mp4') }}" type="video/mp4">
             </video>
             <div class="container">
-                <h2 class="section-title text-glow">STAND WITH THE HUNTERS</h2>
+                <h2 class="section-title text-glow">REACH THE PULL POTENTIAL AND BECOMING A DEMON</h2>
                 <p class="section-text">
                     Join the ranks. Share the spoils and hunt together with those who never rest.
                 </p>
