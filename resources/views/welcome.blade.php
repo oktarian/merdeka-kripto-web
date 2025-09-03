@@ -14,7 +14,6 @@
 <body>
 
     <header class="header">
-        
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo">THE AKAZA RETURN</a>
@@ -63,23 +62,18 @@
                 </p>
             </div>
         </section>
-        
-        <!-- <div class="section-divider">
-            <div class="divider-line"></div>
-            <img src="{{ asset('images/salju.png') }}" alt="Divider" class="divider-icon">
-        </div> -->
 
         {{-- ====================================================================== --}}
         {{-- PATH SECTION --}}
         {{-- ====================================================================== --}}
         <section class="section section-video section-path">
             <video autoplay loop muted playsinline class="video-background">
-                <source src="{{ asset('videos/vid3.mp4') }}" type="video/mp4">
+                <source src="{{ asset('videos/vid7.mp4') }}" type="video/mp4">
             </video>
             <div class="container">
                 <div class="info-box">
-                    <h3 class="section-title" style="font-size: 1.5rem;">HOW THE PATH UNFOLDS</h3>
-                    <p style="color: var(--text-dark);">
+                    <h3 class="info-box-title">HOW THE PATH UNFOLDS</h3>
+                    <p class="info-box-text">
                         The journey is a hunt. We don't bow to corporate chains. It's a maelstrom. akaza strikes from the shadows. The horde gathers. The dance begins. Wild movements, where prices clash and fortunes are forged in the battle. How we choose to party is akaza.
                     </p>
                 </div>
@@ -140,7 +134,7 @@
         {{-- ====================================================================== --}}
       <section class="section section-video section-hunters">
             <video autoplay loop muted playsinline class="video-background">
-                <source src="{{ asset('videos/vid5.mp4') }}" type="video/mp4">
+                <source src="{{ asset('videos/vid8.mp4') }}" type="video/mp4">
             </video>
             <div class="container">
                 <h2 class="section-title text-glow">REACH THE PULL POTENTIAL AND BECOMING A DEMON</h2>
@@ -162,3 +156,4 @@
 
 </body>
 </html>
+
