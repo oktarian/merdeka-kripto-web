@@ -1,54 +1,59 @@
-/* =============================================== */
-/* CSS Kustom untuk AKAZA Theme */
-/* =============================================== */
+/* ==========================================================================
+   Global Styles & Variables
+   ========================================================================== */
 
-/* --- Variabel Warna & Font --- */
+/* Define root variables for colors and fonts for easy management */
 :root {
-    --bg-dark: #0d0d0d;
-    --primary-glow: #00f2ff;
-    --text-light: #e0e0e0;
-    --text-dark: #a0a0a0;
-    --box-bg: rgba(20, 20, 20, 0.8);
-    --box-border: rgba(0, 242, 255, 0.2);
-    --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --sakura-pink: rgba(255, 183, 197, 0.7);
+    --primary-font: 'Poppins', sans-serif;
+    --heading-font: 'Cinzel', serif;
+    --dark-bg: #0D0D0D;
+    --light-text: #F5F5F5;
+    --green-btn: #3E8B52;
+    --green-btn-hover: #316d41;
+    --x-color: #1a1a1a;
+    --telegram-color: #26A5E4;
+    --instagram-color: #E1306C;
+    --facebook-color: #1877F2;
 }
 
-/* --- Reset & Pengaturan Dasar --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Set the base background color on the root element to prevent white edges */
 html {
-    scroll-behavior: smooth;
+    background-color: var(--dark-bg);
 }
 
+/* Basic reset and body styling */
 body {
-    font-family: var(--font-primary);
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    line-height: 1.6;
+    margin: 0;
+    font-family: var(--primary-font);
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    /* Padding di bawah tidak lagi diperlukan karena footer sudah tidak fixed */
 }
+
+main {
+    /* padding-bottom: 100px; */
+}
+
+/* ==========================================================================
+   Reusable Components
+   ========================================================================== */
 
 .container {
-    width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    position: relative; /* Diperlukan agar z-index berfungsi */
-    z-index: 2;
+    padding: 0 20px;
 }
 
-/* --- Header --- */
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem 0;
-    background-color: rgba(13, 13, 13, 0.7);
-    backdrop-filter: blur(10px);
+    background-color: var(--dark-bg);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #2a2a2a;
+    position: relative;
     z-index: 100;
 }
 
@@ -58,281 +63,400 @@ body {
     align-items: center;
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: var(--primary-glow);
-    text-decoration: none;
-    letter-spacing: 2px;
+.logo img {
+    max-width: 150px;
+    height: auto;
 }
 
-.nav-icons a {
-    color: var(--text-light);
-    font-size: 1.2rem;
-    margin-left: 1.5rem;
-    transition: color 0.3s ease;
+.nav-icons {
+    display: flex;
+    gap: 0.75rem;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-icons a[aria-label="X"] { background-color: var(--x-color); border: 1px solid #333; }
+.nav-icons a[aria-label="Telegram"] { background-color: var(--telegram-color); }
+.nav-icons a[aria-label="Instagram"] { background-color: var(--instagram-color); }
+.nav-icons a[aria-label="Facebook"] { background-color: var(--facebook-color); }
 
 .nav-icons a:hover {
-    color: var(--primary-glow);
+    transform: translateY(-3px);
 }
 
-/* --- Elemen Umum Section --- */
-.section {
-    position: relative;
-    padding: 6rem 0;
-    overflow: hidden;
-    text-align: center;
+
+/* ==========================================================================
+   Hero Section - Reworked for correct layering
+   ========================================================================== */
+
+/* Hero Cover */
+.hero-cover {
+  position: relative;
+  width: 100vw;   /* full lebar layar */
+  height: 100vh;  /* full tinggi layar */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.section-title {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+.hero-cover img.hero-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* gambar dipotong biar proporsional */
+  display: block;
 }
 
-.section-text {
-    max-width: 600px;
-    margin: 0 auto 2rem auto;
-    color: var(--text-dark);
-}
 
-.text-glow {
-    text-shadow: 0 0 10px var(--primary-glow), 0 0 20px var(--primary-glow);
-    color: white;
-}
-
-/* --- Video Background --- */
-.video-background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Di bawah konten */
-    opacity: 0.3;
-}
-
-/* --- Hero Section --- */
+/* Hero Section dengan garis */
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 100vw;   /* full lebar layar */
+  height: 40vh;  /* full tinggi layar */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.copy-button {
-    background-color: var(--primary-glow);
-    color: var(--bg-dark);
-    border: none;
-    padding: 0.8rem 2rem;
-    font-weight: bold;
+.hero .hero-decor {
+  width: 100%;
+  height: auto; /* Biarkan tinggi menyesuaikan secara otomatis */
+  object-fit: cover;
+  display: block;
+}
+/* Overlay text di atas garis */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-overlay img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+
+.hero-text {
+    max-width: 90%;
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+.hero-subtext {
+    max-width: 95%;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+.hero-button {
+    max-width: 50%;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-    text-transform: uppercase;
+    transition: transform 0.2s ease;
 }
 
-.copy-button:hover {
-    box-shadow: 0 0 15px var(--primary-glow);
+.hero-button:hover {
     transform: scale(1.05);
 }
 
-/* --- Section dengan Video --- */
-.section-video {
+
+/* ==========================================================================
+   About Potwiz Section
+   ========================================================================== */
+
+.about-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 0;
+}
+
+.about-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Tinggi minimal untuk desktop */
+    gap: 3rem;
+    max-width: 1000px; /* Constrain the max width to match mockup better */
+    margin: 0 auto; /* Center the container */
 }
 
-/* --- Info Box (Path Section) --- */
-.info-box {
-    background-color: var(--box-bg);
-    border: 1px solid var(--box-border);
-    padding: 2.5rem;
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-    max-width: 700px;
-    margin: 0 auto;
+.about-logo {
+    flex: 1; /* Give it a flexible proportion */
+    max-width: 300px; /* But don't let it get too big */
 }
 
-/* --- How to Buy Section --- */
-.how-to-buy-list {
-    list-style: none;
-    max-width: 800px;
-    margin: 2rem auto 0 auto;
-    text-align: left;
-}
-
-.how-to-buy-item {
-    background-color: var(--box-bg);
-    border-left: 4px solid var(--primary-glow);
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: flex-start;
-    border-radius: 0 5px 5px 0;
-}
-
-.how-to-buy-item .number {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-glow);
-    margin-right: 1.5rem;
-    line-height: 1;
-}
-
-/* --- Footer --- */
-.footer {
-    padding: 1rem 0; /* <<< DIUBAH DARI 3rem menjadi 2rem */
-    text-align: center;
-    background-color: #080808;
-}
-
-.footer-socials a {
-    color: var(--text-dark);
-    font-size: 1.5rem;
-    margin: 0 1rem;
-    transition: color 0.3s ease;
-}
-
-.footer-socials a:hover {
-    color: var(--primary-glow);
-}
-
-.copyright {
-    margin-top: 1.5rem;
-    color: #555;
-    font-size: 0.9rem;
-}
-
-/* --- PEMBATAS SECTION BARU --- */
-.section-divider {
-    height: 100px; /* Tinggi area pembatas */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.divider-line {
+.about-logo img {
     width: 100%;
-    height: 1px;
-    background-color: var(--box-border);
-    position: absolute;
+    height: auto;
 }
-.divider-icon {
-    width: 80px; /* Lebar ikon pembatas */
-    height: 80px; /* Tinggi ikon pembatas */
-    background-color: var(--bg-dark); /* Agar menutupi garis di belakangnya */
-    padding: 10px;
+
+.about-text {
+    flex: 2; /* Give more space to the text part */
+}
+
+.about-text-img {
+    width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   Divider Section
+   ========================================================================== */
+
+.divider-section {
+    /* Padding dan background dihilangkan agar gambar mengisi ruang sepenuhnya */
+    line-height: 0; /* Mencegah spasi putih di bawah gambar */
+}
+
+.divider-img {
+    width: 100%; /* Membuat gambar mengisi lebar section */
+    height: auto;
+    display: block; /* Memastikan tidak ada spasi ekstra di bawahnya */
+}
+
+
+
+/* ==========================================================================
+   Community Section
+   ========================================================================== */
+
+.community-section {
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.community-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster {
     position: relative;
-    z-index: 2;
-    animation: spin 20s linear infinite;
+    max-width: 900px; /* Adjust as needed */
+    width: 100%;
 }
 
-/* --- KEYFRAME UNTUK ANIMASI PUTARAN --- */
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* --- EFEK SAKURA GUGUR --- */
-.sakura-container {
+.wizards {
     position: absolute;
+    bottom: 90%; /* DIUBAH: Menaikkan posisi wizard ke tengah poster */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%; /* Slightly reduce size to match mockup */
+    z-index: 2; /* Layer 2: Di atas poster-img */
+}
+
+.wizards img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.poster-img {
+    position: relative; /* Menambahkan position agar z-index berfungsi */
+    z-index: 1; /* Layer 1: Menjadi lapisan dasar */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn-row {
+    position: absolute;
+    bottom: 10%; /* Adjust vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+    z-index: 3; /* Layer 3: Paling atas */
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-enter,
+.btn-chart {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-enter {
+    background-color: #312719;
+    color: #E2B35B;
+    border: 2px solid #E2B35B;
+}
+
+.btn-chart {
+    background-color: #E2B35B;
+    color: #312719;
+    border: 2px solid #E2B35B;
+}
+
+.btn-enter:hover,
+.btn-chart:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Footer - Normal Static Footer
+   ========================================================================== */
+
+/* Footer ini adalah footer standar (static).
+   Ia akan berada di akhir konten dan akan ikut tergulir (scroll)
+   bersama sisa halaman.
+*/
+.footer {
+    width: 100%;
+    /* Tambahkan background hitam untuk memastikan tidak ada celah jika gambar bermasalah */
+    background-color: #000;
+}
+
+.footer .poster-img {
+    width: 100%;      /* Membuat gambar mengisi lebar footer */
+    height: auto;     /* Menjaga rasio aspek gambar */
+    display: block;   /* Menghilangkan spasi ekstra di bawah gambar */
+}
+
+/* koin berjatuhan */
+/* For the container that holds the falling coins */
+#coin-rain-container {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    pointer-events: none; /* Allows interaction with elements beneath */
     overflow: hidden;
-    z-index: 1; /* Di belakang konten tapi di depan background */
-    pointer-events: none; /* Agar tidak bisa diklik */
+    z-index: 100; /* Make sure it's above other content but below popups */
 }
 
-.sakura-petal {
+/* Style for individual coins */
+.falling-coin {
     position: absolute;
-    background-color: var(--sakura-pink);
-    border-radius: 50% 0;
-    width: 10px;
-    height: 15px;
-    top: -20px; /* Mulai dari atas */
-    animation: sakura-fall linear infinite;
+    top: -50px; /* Start above the viewport */
+    width: 30px; /* Adjust coin size */
+    height: 30px;
+    opacity: 0; /* Start invisible */
+    animation: fallAndFade 10s linear forwards; /* Default animation */
 }
 
-@keyframes sakura-fall {
+@keyframes fallAndFade {
     0% {
-        top: -5%;
-        transform: translateX(0) rotate(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1; /* Fade in as it starts falling */
+    }
+    90% {
         opacity: 1;
     }
     100% {
-        top: 105%;
-        transform: translateX(100px) rotate(720deg);
-        opacity: 0;
+        transform: translateY(100vh); /* Fall to the bottom of the viewport */
+        opacity: 0; /* Fade out as it reaches the bottom */
     }
 }
 
-/* Variasi animasi agar tidak seragam */
-.sakura-petal:nth-child(1) { left: 10%; animation-duration: 15s; animation-delay: 0s; }
-.sakura-petal:nth-child(2) { left: 20%; animation-duration: 10s; animation-delay: 2s; transform: scale(0.8); }
-.sakura-petal:nth-child(3) { left: 30%; animation-duration: 20s; animation-delay: 5s; }
-.sakura-petal:nth-child(4) { left: 40%; animation-duration: 12s; animation-delay: 8s; transform: scale(0.9); }
-.sakura-petal:nth-child(5) { left: 50%; animation-duration: 18s; animation-delay: 1s; }
-.sakura-petal:nth-child(6) { left: 60%; animation-duration: 11s; animation-delay: 3s; transform: scale(0.7); }
-.sakura-petal:nth-child(7) { left: 70%; animation-duration: 16s; animation-delay: 6s; }
-.sakura-petal:nth-child(8) { left: 80%; animation-duration: 9s; animation-delay: 4s; transform: scale(1.1); }
-.sakura-petal:nth-child(9) { left: 90%; animation-duration: 14s; animation-delay: 7s; }
-.sakura-petal:nth-child(10) { left: 5%; animation-duration: 17s; animation-delay: 9s; transform: scale(0.85); }
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    .section.hero {
+        padding-top: 250px;
+    }
+
+    .hero-character-image {
+        width: 600px;
+    }
+}
 
 
-/* =============================================== */
-/* ATURAN RESPONSIVE UNTUK MOBILE (LEBAR < 768px) */
-/* =============================================== */
 @media (max-width: 768px) {
-    .section {
-        padding: 4rem 0;
+    .logo img {
+        max-width: 120px;
     }
 
-    .section-title {
-        font-size: 2.2rem; /* Ukuran judul lebih kecil */
-    }
-
-    .hero h1.section-title {
-        font-size: 2.5rem;
-    }
-
-    .section-text {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-    
     .nav-icons a {
-        margin-left: 1rem;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
     }
 
-    /* Mengurangi tinggi minimal section video di mobile */
-    .section-video {
-        min-height: 70vh;
+    .section.hero {
+        padding-top: 180px;
+    }
+
+    .hero-character-image {
+        width: 450px; /* Adjusted responsive width */
     }
     
-    .info-box {
+    .hero .container {
         padding: 1.5rem;
     }
 
-    .how-to-buy-item {
-        padding: 1.2rem;
+    .about-content {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .how-to-buy-item .number {
-        font-size: 1.5rem;
-        margin-right: 1rem;
+    .about-logo {
+        flex-basis: auto;
+        width: 200px;
+        max-width: 200px; /* ensure it doesn't grow too much on mobile */
     }
 }
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .section.hero {
+        padding-top: 120px;
+    }
+    
+    .hero-character-image {
+        width: 320px; /* Adjusted responsive width */
+    }
+
+    .tombol {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .btn-row {
+        flex-direction: column;
+        bottom: 5%;
+        width: 80%; /* prevent buttons from touching edges */
+    }
+}
+
