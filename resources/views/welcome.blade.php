@@ -101,34 +101,6 @@
 <footer class="footer">
       <img class="poster-img" src="{{ asset(path: 'images/footer/foot.png') }}" alt="footer">
 </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const coinContainer = document.createElement('div');
-        coinContainer.id = 'coin-rain-container';
-        document.body.appendChild(coinContainer);
-
-        function createCoin() {
-            const coin = document.createElement('img');
-            // Baris ini sekarang akan berfungsi karena berada di dalam file Blade
-            coin.src = '{{ asset('images/coin.png') }}'; 
-            coin.classList.add('falling-coin');
-            coin.style.left = `${Math.random() * 100}vw`;
-            coin.style.animationDelay = `${Math.random() * 5}s`;
-            coin.style.animationDuration = `${5 + Math.random() * 5}s`;
-
-            coinContainer.appendChild(coin);
-
-            coin.addEventListener('animationend', () => {
-                coin.remove();
-            });
-        }
-
-        // Buat 50 koin di awal
-        for (let i = 0; i < 50; i++) {
-            createCoin();
-        }
-    });
-</script>
 
 </body>
 </html>
