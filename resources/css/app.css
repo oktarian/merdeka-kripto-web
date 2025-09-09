@@ -396,8 +396,14 @@ main {
 /* =============================================== */
 
 @media (max-width: 600px) {
-
-/* Hero Section dengan garis */
+.about-logo img {
+  width: 170px !important;
+  height: auto !important;
+}
+.hero-cover{
+    height: 60vh;  /* full tinggi layar */
+}
+/* Hero Section dengan gari s */
 .hero {
   position: relative;
   width: 100vw;   /* full lebar layar */
