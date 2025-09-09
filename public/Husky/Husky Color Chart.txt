@@ -1,0 +1,44 @@
+Color Chart
+
+1. Latar Belakang
+
+Blue : #62C6E8
+
+-------------------
+
+2.Button (Social Media)
+
+White : #FFFFFF
+Blue  : #39B7E0
+
+--------------------
+
+3. Code Bar
+
+Blue  : #52BCD8
+
+------------------- 
+
+4. Box (tulisan About & Community)
+
+Stroke : 3 pt
+color : #000000
+Corner Radius : 1.5 cm
+
+------------------
+
+5. Button (Join The other)
+
+Color  : #FBF8E9
+
+-------------------
+
+6. Button (See Chart)
+
+Color  : #7B808B
+
+----------------
+
+7. Footer Bar (Huskynaut Rights)
+
+Blue  : #00A3D9

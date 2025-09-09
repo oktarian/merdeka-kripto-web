@@ -1,0 +1,162 @@
+HUSKYNAUT (LOGO)
+
+Font type 	: Open Sans - Bold
+Font Size 	: 39.54 pt
+Color 		: #FEFAED
+
+------------
+
+$HUSKY (Title)
+
+Font type 	: Open Sans - Bold
+Font Size 	: 119.26 pt
+Color 		: #FEFAED
+
+-------------
+
+TO THE MOON AND WALKIES!
+
+Font type 	: Open Sans - Bold
+Font Size 	: 35 pt
+Color 		: #FEFAED
+
+--------------
+
+$HUSKY (for code)
+
+Font type 	: Myriad Pro - Semibold
+Font Size 	: 25 pt
+Color 		: #7C7F8B
+
+-------------
+
+Code in the bar
+
+Font type	: Myriad Pro - Regular
+Font Size	: 24 pt
+Color		: #FFFFFF
+Stroke		: 1 pt
+Stroke Color	: #FFFFFF
+
+--------------
+
+ABOUT
+
+Font type 	: Open Sans - Bold
+Font Size 	: 45 pt
+Color 		: #293444
+
+-------------
+
+HUSKYNAUT (about)
+
+Font Type 	: Open Sans - Bold
+Font Size 	: 72 pt
+Color 		: #293444
+
+--------------
+
+Huskynaut isn't just another meme coin - it's a movement
+driven by dreams and love. These huskies are adorable
+and loved by so many, just as you can trust that $Husky
+will rise slowly but surely as the community grows.
+
+Huskynaut is your opportunity to board the next big
+adventure, powered by strong fundamentals and a
+passionate dog lover. Together we explore the space using
+rockets with huskynaut and collect $Husky as you can hold.
+
+Font Type 	: Open Sans - Medium
+Font Size 	: 30 pt
+Color 		: #293444
+
+---------------
+
+GUIDE
+
+Font Type 	: Open Sans - Bold
+Font Size 	: 45 pt
+Color 		: #2B3445
+
+------------
+
+HOW TO GET $HUSKY
+
+Font Type 	: Open Sans - Bold
+Font Size 	: 72 pt
+Color 		: #2B3445
+
+----------------
+
+GRAB A SOLANA WALLET (SOLFLARE, COIN WALLET, 
+BACKPACK) THAT’S A WAY TO KEEP YOUR HUSKY
+ALIVE AND GROW.
+
+LOAD A LITTLE SOL INTO YOUR WALLET.
+SO YOU CAN ALWAYS KEEPS YOUR DOG FED AND
+LOVES YOU MORE
+
+HEAD TO A SOLANA DEX LIKE JUPITER OR RAYDIUM.
+PASTE THE OFFICIAL $HUSKY CONTRACT, TRADE
+YOUR SOL, AND LET YOUR PET INCREASE.
+
+ADD $HUSKY TO YOUR WALLET, KEEP AN EYE ON IT,
+AND LET YOUR $HUSKY BRING MORE FRIEND TO YOU.
+
+Font Type 	: Open Sans - Medium
+Font Size 	: 30 pt
+Color 		: #293444
+
+----------------
+
+COMMUNITY
+
+Font type 	: Open Sans - Bold
+Font Size 	: 45 pt
+Color 		: #FBF8E9
+
+------------------
+
+BARK TO THE MOON
+
+Font type 	: Open Sans - Bold
+Font size 	: 72 pt
+Color 		: #2B3445
+
+--------------
+
+EVERY JOY, EVERY SMILE, EVERY BARK KEEPS THE COMMUNITY ALIVE. THAT’S WHAT MAKES HUSKYNAUT MORE THAN DOG, FOOD AND TOYS - IT’s THE HAPPINESS WE FEEL IT.
+
+STEP IN, MEET THE OTHERS, SHARE YOUR STORY. SOME COME TO PLAY, SOME COME TO ADOPT,
+SOME JUST FOLLOW THE FEELING. HOWEVER ONCE YOU ENTER THIS PLACE, YOU WILL HAPPY
+TO COME MORE OFTEN TO FEEL THE LOVE FROM THEM
+
+Font Type 	: Open Sans - Medium
+Font Size 	: 30 pt
+Color 		: #293444
+
+-------------
+
+JOIN THE OTHER
+
+Font Type 	: Open Sans - Medium
+Font Size 	: 30 pt
+Color 		: #293444
+
+-------------
+
+SEE CHART
+
+Font Type 	: Open Sans - Medium
+Font Size 	: 30 pt
+Color 		: #FBF8E9
+
+-----------
+
+2025 Huskynaut. All Rights reserved.
+
+Font Type	: Myriad Pro - Regular
+Font Size 	: 35 pt
+Color 		: #FFFFFF
+Stroke 		: 1 pt
+Stroke Color 	: #FFFFFF

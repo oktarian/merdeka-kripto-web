@@ -1,40 +1,19 @@
-/* ==========================================================================
-   Global Styles & Variables
-   ========================================================================== */
+/* =============================================== */
+/* General Styling */
+/* =============================================== */
 
-/* Define root variables for colors and fonts for easy management */
-:root {
-    --primary-font: 'Poppins', sans-serif;
-    --heading-font: 'Cinzel', serif;
-    --dark-bg: #0D0D0D;
-    --light-text: #F5F5F5;
-    --green-btn: #3E8B52;
-    --green-btn-hover: #316d41;
-    --x-color: #1a1a1a;
-    --telegram-color: #26A5E4;
-    --instagram-color: #E1306C;
-    --facebook-color: #1877F2;
-}
-
-/* Set the base background color on the root element to prevent white edges */
-html {
-    background-color: var(--dark-bg);
-}
-
-/* Basic reset and body styling */
 body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    /* Padding di bawah tidak lagi diperlukan karena footer sudah tidak fixed */
+    color: #fff;
+    /* CATATAN: Path gambar ini harus benar dan gambar ada di resources/images/ */
+    background-image: url('../images/main-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f0f8ff; /* Fallback color */
 }
-
-main {
-    /* padding-bottom: 100px; */
-}
-
-/* ==========================================================================
-   Reusable Components
-   ========================================================================== */
 
 .container {
     max-width: 1200px;
@@ -42,16 +21,28 @@ main {
     padding: 0 20px;
 }
 
-/* ==========================================================================
-   Header & Navigation
-   ========================================================================== */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
+/* Base style for ALL sections to ensure consistency */
+.hero, .about, .guide, .community {
+    padding: 100px 0;
+    background-size: cover; /* Default-nya adalah cover */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Needed for positioning content inside */
+}
+
+/* =============================================== */
+/* Header & Navbar */
+/* =============================================== */
 .header {
-    background-color: var(--dark-bg);
-    padding: 1.5rem 0;
-    border-bottom: 1px solid #2a2a2a;
-    position: relative;
-    z-index: 100;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
 }
 
 .navbar {
@@ -62,441 +53,254 @@ main {
 
 .logo img {
     max-width: 150px;
-    height: auto;
 }
 
 .nav-icons {
     display: flex;
-    gap: 0.75rem;
+    gap: 15px;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 .nav-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
+    border: 1px solid #fff;
+    border-radius: 50%;
     text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-icons a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* =============================================== */
+/* Hero Section */
+/* =============================================== */
+.hero {
+    padding-top: 150px;
+    text-align: center;
+    min-height: 80vh;
+    background-image: url('../images/begin/background.png');
+}
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-image {
+    display: block;
+}
+
+.hero-title {
+    max-width: 400px;
+}
+.hero-subtitle {
+    max-width: 500px;
+}
+.hero-character {
+    max-width: 150px;
+    margin-top: 15px;
+}
+.hero-button {
+    max-width: 450px;
+    margin-top: 20px;
     transition: transform 0.3s ease;
 }
 
-.nav-icons a[aria-label="X"] { background-color: var(--x-color); border: 1px solid #333; }
-.nav-icons a[aria-label="Telegram"] { background-color: var(--telegram-color); }
-.nav-icons a[aria-label="Instagram"] { background-color: var(--instagram-color); }
-.nav-icons a[aria-label="Facebook"] { background-color: var(--facebook-color); }
-
-.nav-icons a:hover {
-    transform: translateY(-3px);
-}
-
-
-/* ==========================================================================
-   Hero Section - Reworked for correct layering
-   ========================================================================== */
-
-/* Hero Cover */
-.hero-cover {
-  position: relative;
-  width: 100vw;   /* full lebar layar */
-  height: 100vh;  /* full tinggi layar */
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.hero-cover img.hero-background {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* gambar dipotong biar proporsional */
-  display: block;
-}
-
-
-/* Hero Section dengan garis */
-.hero {
-  position: relative;
-  width: 100vw;   /* full lebar layar */
-  height: 40vh;  /* full tinggi layar */
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.hero .hero-decor {
-  width: 100%;
-  height: auto; /* Biarkan tinggi menyesuaikan secara otomatis */
-  object-fit: cover;
-  display: block;
-}
-/* Overlay text di atas garis */
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero-overlay img {
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin: 10px auto;
-}
-
-
-.hero-text {
-    max-width: 90%;
-    margin: 0 auto 15px auto;
-    display: block;
-}
-
-.hero-subtext {
-    max-width: 95%;
-    margin: 0 auto 20px auto;
-    display: block;
-}
-
-.hero-button {
-    max-width: 50%;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
 .hero-button:hover {
     transform: scale(1.05);
 }
+.token-container {
+    display: flex;
+    align-items: center;  /* vertikal sejajar */
+    gap: 12px;            /* jarak antar elemen */
+    margin-top: 850px;
+}
 
 
-/* ==========================================================================
-   About Potwiz Section
-   ========================================================================== */
+/* =============================================== */
+/* About Section (REVISED) */
+/* =============================================== */
+.about {
+    background-image: url('../images/about/background.png');
+    background-size: cover; /* KUNCI: Kembali ke cover untuk mengisi lebar */
+    min-height: 700px; /* Memberi ruang vertikal agar konten tidak terpotong */
+    display: flex;
+    align-items: center;
+}
 
-.about-section {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 4rem 0;
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.about-character {
+    flex: 1;
+}
+
+.about-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* bisa center kalau mau tengah */
+    line-height: 1.1;
+}
+
+.about-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3542;
+    letter-spacing: 2px;
+}
+
+.about-title {
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #2c3542;
+}
+
+
+
+.about-character-left {
+    text-align: right;
+    max-width: 250px;
+}
+
+.about-character-right {
+    text-align: left;
+    max-width: 200px;
 }
 
 .about-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    max-width: 1000px; /* Constrain the max width to match mockup better */
-    margin: 0 auto; /* Center the container */
-}
-
-.about-logo {
-    flex: 1; /* Give it a flexible proportion */
-    max-width: 300px; /* But don't let it get too big */
-}
-
-.about-logo img {
-    width: 100%;
-    height: auto;
-}
-
-.about-text {
-    flex: 2; /* Give more space to the text part */
-}
-
-.about-text-img {
-    width: 100%;
-    height: auto;
-}
-
-/* ==========================================================================
-   Divider Section
-   ========================================================================== */
-
-.divider-section {
-    /* Padding dan background dihilangkan agar gambar mengisi ruang sepenuhnya */
-    line-height: 0; /* Mencegah spasi putih di bawah gambar */
-}
-
-.divider-img {
-    width: 100%; /* Membuat gambar mengisi lebar section */
-    height: auto;
-    display: block; /* Memastikan tidak ada spasi ekstra di bawahnya */
-}
-
-
-
-/* ==========================================================================
-   Community Section
-   ========================================================================== */
-
-.community-section {
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    padding: 5rem 0;
+    flex: 2;
+    max-width: 600px;
     text-align: center;
 }
 
-.community-content {
+.about-content img {
+    margin-bottom: 15px;
+}
+
+/* =============================================== */
+/* Guide Section (REVISED) */
+/* =============================================== */
+.guide {
+    background-image: url('../images/guide/background.png');
+    background-size: cover; /* KUNCI: Kembali ke cover untuk mengisi lebar */
+    min-height: 800px; /* Memberi ruang vertikal agar konten tidak terpotong */
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.poster {
-    position: relative;
-    max-width: 900px; /* Adjust as needed */
-    width: 100%;
-}
-
-.wizards {
-    position: absolute;
-    bottom: 90%; /* DIUBAH: Menaikkan posisi wizard ke tengah poster */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 45%; /* Slightly reduce size to match mockup */
-    z-index: 2; /* Layer 2: Di atas poster-img */
-}
-
-.wizards img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.poster-img {
-    position: relative; /* Menambahkan position agar z-index berfungsi */
-    z-index: 1; /* Layer 1: Menjadi lapisan dasar */
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.btn-row {
-    position: absolute;
-    bottom: 10%; /* Adjust vertical position */
-    left: 50%;
-    transform: translateX(-50%);
+.guide-container {
     display: flex;
-    gap: 1.5rem;
-    z-index: 3; /* Layer 3: Paling atas */
-    width: 100%;
     justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
 }
 
-.btn-enter,
-.btn-chart {
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-family: var(--heading-font);
-    font-weight: 700;
-    font-size: 1rem;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+.guide-content {
+    flex: 1;
+    max-width: 500px;
+}
+.guide-characters {
+    flex: 1;
+    max-width: 400px;
 }
 
-.btn-enter {
-    background-color: #312719;
-    color: #E2B35B;
-    border: 2px solid #E2B35B;
+/* =============================================== */
+/* Community Section (REVISED) */
+/* =============================================== */
+.community {
+    background-image: url('../images/community/background.png');
+    background-size: cover; /* KUNCI: Kembali ke cover untuk mengisi lebar */
+    min-height: 1255px; /* Memberi ruang vertikal agar konten tidak terpotong */
+    display: flex;
+    align-items: center;
 }
 
-.btn-chart {
-    background-color: #E2B35B;
-    color: #312719;
-    border: 2px solid #E2B35B;
+.community-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+.community-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.btn-enter:hover,
-.btn-chart:hover {
+.community-title {
+    max-width: 350px;
+}
+
+.community-moon {
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.community-text {
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.community-buttons {
+     max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+.button-image {
+    transition: transform 0.3s ease;
+    max-width: 200px;
+}
+
+.button-image:hover {
     transform: scale(1.05);
 }
 
-/* ==========================================================================
-   Footer - Normal Static Footer
-   ========================================================================== */
-
-/* Footer ini adalah footer standar (static).
-   Ia akan berada di akhir konten dan akan ikut tergulir (scroll)
-   bersama sisa halaman.
-*/
+/* =============================================== */
+/* Footer */
+/* =============================================== */
 .footer {
-    width: 100%;
-    /* Tambahkan background hitam untuk memastikan tidak ada celah jika gambar bermasalah */
-    background-color: #000;
+    padding: 2px 0;
+    text-align: center;
+    background-color: #00A3D9;
+    position: relative;
 }
 
-.footer .poster-img {
-    width: 100%;      /* Membuat gambar mengisi lebar footer */
-    height: auto;     /* Menjaga rasio aspek gambar */
-    display: block;   /* Menghilangkan spasi ekstra di bawah gambar */
-}
+/* =============================================== */
+/* Responsive Design */
+/* =============================================== */
 
-/* koin berjatuhan */
-/* For the container that holds the falling coins */
-#coin-rain-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Allows interaction with elements beneath */
-    overflow: hidden;
-    z-index: 100; /* Make sure it's above other content but below popups */
-}
-
-/* Style for individual coins */
-.falling-coin {
-    position: absolute;
-    top: -50px; /* Start above the viewport */
-    width: 30px; /* Adjust coin size */
-    height: 30px;
-    opacity: 0; /* Start invisible */
-    animation: fallAndFade 10s linear forwards; /* Default animation */
-}
-
-@keyframes fallAndFade {
-    0% {
-        transform: translateY(0);
-        opacity: 0;
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 30px;
     }
-    10% {
-        opacity: 1; /* Fade in as it starts falling */
+
+    .about-container, .guide-container {
+        flex-direction: column;
+        gap: 30px;
     }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh); /* Fall to the bottom of the viewport */
-        opacity: 0; /* Fade out as it reaches the bottom */
+
+    .community-buttons {
+        flex-direction: column;
+        gap: 15px;
     }
 }
 
-
-/* ==========================================================================
-   Responsive Design
-   ========================================================================== */
-
-
-
-
-/* =============================================== */
-/* Gaya CSS Khusus untuk Tampilan Mobile */
-/* =============================================== */
-/* =============================================== */
-/* Gaya CSS Khusus untuk Tampilan Mobile */
-/* =============================================== */
-
-@media (max-width: 600px) {
-.about-logo img {
-  width: 170px !important;
-  height: auto !important;
-}
-.hero-cover{
-    height: 60vh;  /* full tinggi layar */
-}
-/* Hero Section dengan gari s */
-.hero {
-  position: relative;
-  width: 100vw;   /* full lebar layar */
-  height: auto;  /* full tinggi layar */
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.hero .hero-decor {
-  width: 100%;
-  height: auto; /* Biarkan tinggi menyesuaikan secara otomatis */
-  object-fit: cover;
-  display: block;
-}
-/* Overlay text di atas garis */
-.hero-overlay {
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero-overlay img {
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin: 10px auto;
-}
-
-
-.hero-text {
-    max-width: 90%;
-    margin: 0 auto 15px auto;
-    display: block;
-}
-
-.hero-subtext {
-    max-width: 95%;
-    margin: 0 auto 20px auto;
-    display: block;
-}
-
-.hero-button {
-    max-width: 50%;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.hero-button:hover {
-    transform: scale(1.05);
-}
-.btn-row {
-    position: absolute;
-    bottom: 5%; /* Adjust vertical position */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 1.5rem;
-    z-index: 3; /* Layer 3: Paling atas */
-    width: 100%;
-    justify-content: center;
-}
-
-.btn-enter,
-.btn-chart {
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    text-decoration: none;
-    font-family: var(--heading-font);
-    font-weight: 700;
-    font-size: 1rem;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.btn-enter {
-    background-color: #312719;
-    color: #E2B35B;
-    border: 2px solid #E2B35B;
-}
-
-.btn-chart {
-    background-color: #E2B35B;
-    color: #312719;
-    border: 2px solid #E2B35B;
-}
-
-.btn-enter:hover,
-.btn-chart:hover {
-    transform: scale(1.05);
-}
-}
