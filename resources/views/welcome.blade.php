@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     {{-- Font Awesome untuk icon medsos --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    @vite(['resources/css/app.css','resources/css/custom.css','resources/js/app.js'])
+    @vite(['resources/css/app.css','resources/js/app.js'])
 
 </head>
 <body>
@@ -28,11 +28,15 @@
                 <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
+        
         </nav>
     </div>
 </header>
 
 <main>
+<audio  autoplay loop  id="background-music">
+  <source src="/images/potter.mp3" type="audio/mpeg">
+</audio>
     <!-- Hero Section -->
    <section class="hero-cover">
      <img src="{{ asset('images/begin/cover2.png') }}" alt="PotWiz Character" class="hero-background">
@@ -55,7 +59,7 @@
   <!-- About Potwiz Section -->
 
 <section class="about-section" style="background-image: url('{{ asset('images/body/bg-castle.png') }}')">
-  <div class="container about-content">
+    <div class="container about-content">
       <!-- Emblem -->
       <div class="about-logo">
           <img src="{{ asset('images/body/Emblem.png') }}" alt="Potwiz Emblem">
@@ -65,16 +69,16 @@
       <div class="about-text">
           <img src="{{ asset('images/body/about.png') }}" alt="About Potwiz Text" class="about-text-img">
       </div>
-  </div>
+      
+    </div>
+   
+</section>
 
+ <div class="divider-section">
+        <img src="{{ asset('images/body/how.png') }}" alt="How to Get $Galeon" class="divider-img">
+    </div>
 
-<!-- Divider How to Get Galeon -->
-<div class="divider-section">
-  <img src="{{ asset('images/body/how.png') }}" alt="How to Get $Galeon" class="divider-img">
-</div>
-
-<!-- Community Section -->
-<section class="community-section" style="background-image:url('{{ asset('images/community/bg-comunity.png') }}')">
+<section class="community-section" style="background-image:url('{{ asset('images/community/bg-comunity2.png') }}')">
   <div class="community-content">
     <!-- Poster = gambar teks; semua overlay (wizard & tombol) ditempel di sini -->
     <div class="poster">
