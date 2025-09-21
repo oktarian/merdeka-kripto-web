@@ -1,110 +1,149 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PotWiz - Join The Magic</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spongebob Movie</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    {{-- Font untuk fallback text --}}
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    {{-- Font Awesome untuk icon medsos --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    @vite(['resources/css/app.css','resources/js/app.js'])
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome untuk icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+     @vite(['resources/css/app.css','resources/js/app.js']) 
 
+ 
 </head>
 <body>
 
-<header class="header">
-    <div class="container">
-        <nav class="navbar">
-            <a href="#" class="logo">
-                <img src="{{ asset('images/begin/Potwiz-01.png') }}" alt="PotWiz Logo">
-            </a>
-            <div class="nav-icons">
-                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            </div>
-        
-        </nav>
+<audio autoplay loop muted>
+  <source src="{{ asset('images/spongebob-movie/bestDay.mp3') }}" type="audio/mpeg">
+</audio>
+<button id="unmute-button" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">🔈</button>
+<!-- HEADER -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#">
+        <img src="{{ asset('images/spongebob-movie/logo.png') }}" alt="Logo" height="150">
+      </a>
+      <div class="d-flex gap-2">
+        <a href="#" class="btn btn-outline-light btn-circle"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="btn btn-outline-light btn-circle"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#" class="btn btn-outline-light btn-circle"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="btn btn-outline-light btn-circle"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
     </div>
+  </nav>
 </header>
 
-<main>
-<audio  autoplay loop  id="background-music">
-  <source src="/images/potter.mp3" type="audio/mpeg">
-</audio>
-    <!-- Hero Section -->
-   <section class="hero-cover">
-     <img src="{{ asset('images/begin/cover2.png') }}" alt="PotWiz Character" class="hero-background">
-   </section>
+<!-- HERO SECTION -->
+<section class="position-relative text-white">
+  <!-- Background -->
+  <img src="{{ asset('images/spongebob-movie/spons.jpg') }}" class="w-100" alt="Hero Image">
 
-    <section class="hero">
-        <!-- Background dekor garis -->
-        <img src="{{ asset('images/begin/garis.png') }}" alt="PotWiz Garis" class="hero-decor">
+  <!-- Overlay Text -->
+  <div  id="hero-text" class="position-absolute top-50 start-0 translate-middle-y ms-5">
+    <h1 class="display-1 fw-bold">
+      Last chance<br>to BUY<br>$BOB
+    </h1>
+    <p class="lead">before exchange listings</p>
+    <h4 >
+      $BOB
+      <p class="small bg-dark px-2 py-1 rounded d-inline-block">
+        DedcA5984780Bafc599bD69ADd087D56
+      </p>
+    </h4>
+  </div>
+ 
 
-        <!-- Overlay text -->
-        <div class="hero-overlay">
-            <img src="{{ asset('images/begin/join.png') }}" alt="Join PotWiz and Being a Galeonaires" class="hero-text">
-            <img src="{{ asset('images/begin/dont.png') }}" alt="Don't miss out..." class="hero-subtext">
-            <img src="{{ asset('images/begin/button.png') }}" alt="I'm ready being a Galeonaires" class="hero-button">
-        </div>
-    </section>
-
-
-
-  <!-- About Potwiz Section -->
-
-<section class="about-section" style="background-image: url('{{ asset('images/body/bg-castle.png') }}')">
-    <div class="container about-content">
-      <!-- Emblem -->
-      <div class="about-logo">
-          <img src="{{ asset('images/body/Emblem.png') }}" alt="Potwiz Emblem">
-      </div>
-
-      <!-- About Text -->
-      <div class="about-text">
-          <img src="{{ asset('images/body/about.png') }}" alt="About Potwiz Text" class="about-text-img">
-      </div>
-      
-    </div>
-   
 </section>
 
- <div class="divider-section">
-        <img src="{{ asset('images/body/how.png') }}" alt="How to Get $Galeon" class="divider-img">
-    </div>
 
-<section class="community-section" style="background-image:url('{{ asset('images/community/bg-comunity2.png') }}')">
-  <div class="community-content">
-    <!-- Poster = gambar teks; semua overlay (wizard & tombol) ditempel di sini -->
-    <div class="poster">
-      <!-- Wizard (boleh 1 sprite PNG berisi 3 karakter, atau 3 img terpisah) -->
-      <div class="wizards">
-        <!-- Jika kamu punya 1 file sprite -->
-        <img src="{{ asset('images/community/wizard.png') }}" alt="Wizards">
+<!--  SECTION 2 -->
+<section class="section2" style="position: relative; width:100%;">
+  <img src="{{ asset('images/spongebob-movie/nanas.jpg') }}" 
+       alt="Last chance to buy $BOB"
+       style="width:100%; display:block;">
+  <!-- Buy -->
+  <div class="buy" style="position:absolute; top:10px; right:20px; z-index:2;">
+    <img src="{{ asset('images/spongebob-movie/buy.png') }}" alt="Get Buy" style="max-width:50vh;">
+  </div>
+
+  <!-- Slider -->
+  <div class="slider" style="position:absolute; top:20%; left:10%; width:70vh; z-index:2;">
+    <div class="swiper my-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="{{ asset('images/spongebob-movie/slider1.png') }}" alt="Slider 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="{{ asset('images/spongebob-movie/slider2.png') }}" alt="Slider 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="{{ asset('images/spongebob-movie/slider3.png') }}" alt="Slider 3">
+        </div>
+        <div class="swiper-slide">
+          <img src="{{ asset('images/spongebob-movie/slider4.png') }}" alt="Slider 4">
+        </div>
       </div>
-
-      <!-- Gambar teks (judul + paragraf sudah jadi PNG) -->
-      <img class="poster-img" src="{{ asset(path: 'images/community/comunity.png') }}" alt="The Magic Echoes">
-
-      <!-- Tombol di atas gambar -->
-      <div class="btn-row">
-        <a href="#" class="btn-enter">ENTER THE GATE</a>
-        <a href="#" class="btn-chart">SEE CHART</a>
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
+  </div>
+
+</section>
+
+<!-- JUMP -->
+<img class = "jump-image" src="{{ asset('images/spongebob-movie/jump2.png') }}" 
+     alt="Jump">
+
+
+<!-- SECTION 3 -->
+<section class="section3" style="position: relative; width:100%; background:yellow;">
+  <!-- Jump image ditempel di atas Section 3 -->
+
+  <img src="{{ asset('images/spongebob-movie/pat-spons.jpg') }}" 
+       class="w-100" alt="Background">
+  <div style="position:absolute; top:30%; left:0; right:0; padding:1rem;">
+    <img src="{{ asset('images/spongebob-movie/text-about.png') }}" 
+         class="img-fluid" alt="Story">
   </div>
 </section>
 
-
-</main>
-<footer class="footer">
-      <img class="poster-img" src="{{ asset(path: 'images/footer/foot.png') }}" alt="footer">
+<!-- FOOTER -->
+<footer class="bg-primary text-white py-4 text-center">
+  <p class="mb-2">©2025 SPONGEBOB. ALL rights reserved.</p>
+  <div class="d-flex justify-content-center gap-2">
+    <a href="#" class="btn btn-outline-light btn-circle"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="#" class="btn btn-outline-light btn-circle"><i class="fa-brands fa-telegram"></i></a>
+    <a href="#" class="btn btn-outline-light btn-circle"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" class="btn btn-outline-light btn-circle"><i class="fa-brands fa-facebook-f"></i></a>
+  </div>
 </footer>
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".my-slider", {
+    loop: true,
+    autoplay: { delay: 3000 }
+  });
+   const music = document.getElementById('background-music');
+    const unmuteButton = document.getElementById('unmute-button');
+
+    unmuteButton.addEventListener('click', function() {
+        if (music.muted) {
+            music.muted = false;
+            unmuteButton.textContent = '🔇';
+        } else {
+            music.muted = true;
+            unmuteButton.textContent = '🔈';
+        }
+    });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

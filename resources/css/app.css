@@ -1,858 +1,180 @@
-/* ==========================================================================
-   Global Styles & Variables
-   ========================================================================== */
-
-/* Define root variables for colors and fonts for easy management */
-:root {
-    --primary-font: 'Poppins', sans-serif;
-    --heading-font: 'Cinzel', serif;
-    --dark-bg: #0D0D0D;
-    --light-text: #F5F5F5;
-    --green-btn: #3E8B52;
-    --green-btn-hover: #316d41;
-     --x-color: #6E2626;         /* Merah Marun Tua */
-    --telegram-color: #F3A638;  /* Oranye Mustard */
-    --instagram-color: #3A587A; /* Biru Tua */
-    --facebook-color: #4A6741;  /* Hijau Zaitun */
-}
-
-/* Set the base background color on the root element to prevent white edges */
-html {
-    background-color: var(--dark-bg);
-}
-
-/* Basic reset and body styling */
-body {
-    margin: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    /* Padding di bawah tidak lagi diperlukan karena footer sudah tidak fixed */
-}
-
-main {
-    /* padding-bottom: 100px; */
-}
-
-/* ==========================================================================
-   Reusable Components
-   ========================================================================== */
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* ==========================================================================
-   Header & Navigation
-   ========================================================================== */
-
-.header {
-    background-color: var(--dark-bg);
-    padding: 1.5rem 0;
-    border-bottom: 1px solid #2a2a2a;
-    position: relative;
-    z-index: 100;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img {
-    max-width: 150px;
-    height: auto;
-}
-
-.nav-icons {
-    display: flex;
-    gap: 0.75rem;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.nav-icons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    transition: transform 0.3s ease;
-}
-
-.nav-icons a[aria-label="X"] { background-color: var(--x-color); border: 1px solid #333; }
-.nav-icons a[aria-label="Telegram"] { background-color: var(--telegram-color); }
-.nav-icons a[aria-label="Instagram"] { background-color: var(--instagram-color); }
-.nav-icons a[aria-label="Facebook"] { background-color: var(--facebook-color); }
-
-.nav-icons a:hover {
-    transform: translateY(-3px);
-}
-
-
-/* ==========================================================================
-   Hero Section - Reworked for correct layering
-   ========================================================================== */
-
-/* Hero Cover */
-.hero-cover {
-  position: relative;
-  width: 100vw;   /* full lebar layar */
-  height: 100vh;  /* full tinggi layar */
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.hero-cover img.hero-background {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* gambar dipotong biar proporsional */
-  display: block;
-
-}
-
-
-/* Hero Section dengan garis */
-.hero {
-  position: relative;
-  width: 100vw;   /* full lebar layar */
-  height: 40vh;  /* full tinggi layar */
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.hero .hero-decor {
-  width: 100%;
-  height: auto; /* Biarkan tinggi menyesuaikan secara otomatis */
-  object-fit: cover;
-  display: block;
-}
-/* Overlay text di atas garis */
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero-overlay img {
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin: 10px auto;
-}
-
-
-.hero-text {
-    max-width: 90%;
-    margin: 0 auto 15px auto;
-    display: block;
-}
-
-.hero-subtext {
-    max-width: 95%;
-    margin: 0 auto 20px auto;
-    display: block;
-}
-
-.hero-button {
-    max-width: 50%;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.hero-button:hover {
-    transform: scale(1.05);
-}
-
-
-/* ==========================================================================
-   About Potwiz Section
-   ========================================================================== */
-
-
-.about-section {
-    /* TAMBAHKAN BARIS INI */
-    min-height: 150vh; /* Atur tinggi minimal 80% dari tinggi layar */
-
-    width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-
-    /* Properti Anda yang sudah ada */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 4rem 0;
-}
-
-/* Container yang membungkus logo dan teks */
-.about-content {
-    display: grid;
+  body {
+      font-family: 'Lato', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+        padding: 0;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Fredoka One', cursive;
+    }
+    section {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    section img.w-100 {
+      object-fit: cover;
+    }
+    .btn-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .jump-image {
+    position: absolute !important;
     
-    /* KUNCI: Buat 2 kolom dengan lebar yang sama (seimbang) */
-    grid-template-columns: 1fr 1fr; 
+    /* KUNCI: Sesuaikan angka ini untuk menaikkan/menurunkan gambar */
+    top: 210vh !important; 
     
-    /* Membuat logo dan teks sejajar di tengah secara vertikal */
-    align-items: center; 
+    /* Atur posisi horizontal dari kiri */
+    left: 5% !important; /* Sesuaikan nilainya */
     
-    /* Memberi jarak 3rem antara kolom logo dan kolom teks */
-    gap: 3rem; 
+    /* Atur ukuran yang responsif */
+    width: 70vh !important;      /* Lebar 25% dari lebar layar */
     
-    /* Opsional: Batasi lebar maksimal agar tidak terlalu renggang di layar besar */
-    max-width: 1100px;
-    margin: 0 auto; /* Memposisikan seluruh grup di tengah section */
+    z-index: 10;      /* Pastikan berada di lapisan paling atas */
+}
+    /* =========================
+   📱 MOBILE PORTRAIT (<=767px)
+   ========================= */
+@media (max-width: 767px) {
+
+  /* === SECTION 1 (Hero) === */
+/* Ganti kode di dalam @media Anda dengan ini */
+
+/* Targetkan gambar background */
+ /* Gunakan selector #id yang lebih kuat dan bersih */
+/* Aturan ini HANYA aktif di layar mobile */
+@media (max-width: 768px) {
+
+    #hero-text {
+        position: absolute !important;
+        
+        /* Posisi tengah-kiri yang presisi untuk mobile */
+        top: 50% !important;
+        left: 20px !important; 
+        transform: translateY(-50%) !important;
+        
+        /* Hapus margin bootstrap agar posisi 'left' akurat */
+        margin: 0 !important;
+        
+        /* Atur lebar dan perataan teks */
+        width: 90% !important; 
+        max-width: 450px !important;
+        text-align: left !important;
+    }
+
+    #hero-text h1 {
+        font-size: 1.2rem !important; /* Ukuran font kecil untuk mobile */
+    }
+
+    #hero-text p.lead {
+        font-size: 0.5rem !important;
+    }
+    #hero-text h4 p {
+        font-size: 0.3rem !important;
+                margin: 0.3 !important;
+                padding: 0 !important;
+
+    }
+    #hero-text h4 {
+        font-size: 0.4rem !important;
+        margin-top: 10px !important;
+    }
+    /* Anda bisa menambahkan aturan mobile lainnya di sini */
+
 }
 
-/* Kolom Kiri: Logo */
-.about-logo {
-    /* Anda bisa tetap menggunakan position relative jika ingin efek menjorok keluar */
-    position: relative;
-    left: -150px; 
-}
-
-.about-logo img {
-    width: 120%;
-    height: auto;
-}
-
-
-
-/* Kolom Kanan: Teks */
-.about-text {
-    flex: 0 0 60%; /* Tidak akan membesar, tidak akan menyusut, lebar dasar 60% */
-}
-
-.about-text-img {
-    width: 150%;
-    height: auto;
-}
-
-/* ==========================================================================
-   Divider Section
-   ========================================================================== */
-
-
-.divider-section {
-    line-height: 0;
-    
-    /* TAMBAHKAN BARIS INI */
-    margin-top: -320px; /* Tarik ke atas. Sesuaikan nilai 80px sesuai kebutuhan. */
-
-    /* Opsional: Tambahkan z-index jika divider tertutup elemen lain */
+.section2 .buy {
     position: absolute;
-    z-index: 10;
-}
-
-.divider-img {
-    width: 100%;
-    height: auto;
-    
-}
-
-/* ==========================================================================
-   Community Section
-   ========================================================================== */
-.community-section {
-     /* TAMBAHKAN BARIS INI */
-    min-height: 120vh; /* Atur tinggi minimal 80% dari tinggi layar */
-
-    width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-
-    /* Properti Anda yang sudah ada */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 4rem 0;
-}
-.community-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 80vh; /* Memberi ruang agar bisa di tengah secara vertikal */
-}
-
-.poster {
-    position: absolute;
-    top: 48%;
-    max-width: 150vh; /* DIUBAH: Poster dibuat sedikit lebih besar */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-.wizards {
-    position: absolute;
-    top: -30%; /* DIUBAH: Wizard diturunkan. Sesuaikan nilai ini. */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 45%;
-    z-index: 2;
-}
-
-.wizards img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.poster-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.btn-row {
-    position: absolute;
-    bottom: 15%; 
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 1.5rem;
     z-index: 3;
-    width: 100%;
-    justify-content: center;
-}
-
-/* ... (style untuk tombol .btn-enter dan .btn-chart tetap sama) ... */
-
-.btn-enter,
-.btn-chart {
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    /* Pastikan Anda memiliki variabel --heading-font atau ganti dengan nama font */
-    font-family: 'Cinzel', serif; /* Contoh fallback font */
-    font-weight: 700;
-    font-size: 1rem;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.btn-enter {
-    background-color: #312719;
-    color: #E2B35B;
-    border: 2px solid #E2B35B;
-}
-
-.btn-chart {
-    background-color: #E2B35B;
-    color: #312719;
-    border: 2px solid #E2B35B;
-}
-
-.btn-enter:hover,
-.btn-chart:hover {
-    transform: scale(1.05);
-}
-
-/* ==========================================================================
-   Footer - Normal Static Footer
-   ========================================================================== */
-
-/* Footer ini adalah footer standar (static).
-   Ia akan berada di akhir konten dan akan ikut tergulir (scroll)
-   bersama sisa halaman.
-*/
-.footer {
-    width: 100%;
-    /* Tambahkan background hitam untuk memastikan tidak ada celah jika gambar bermasalah */
-    background-color: #000;
-}
-
-.footer .poster-img {
-    width: 100%;      /* Membuat gambar mengisi lebar footer */
-    height: auto;     /* Menjaga rasio aspek gambar */
-    display: block;   /* Menghilangkan spasi ekstra di bawah gambar */
-}
-
-
-
-
-/* ==========================================================================
-   Responsive Design
-   ========================================================================== */
-
-
-
-
-/* =============================================== */
-/* Gaya CSS Khusus untuk Tampilan Mobile */
-/* =============================================== */
-/* =============================================== */
-/* Gaya CSS Khusus untuk Tampilan Mobile */
-/* =============================================== */
-
-@media (max-width: 600px) {
     
+    /* Atur posisi di tengah-kanan */
+    top: 50%;
+    right: 5%; /* Jarak 5% dari tepi kanan (lebih responsif) */
+    transform: translateY(-10%);
 
-    .hero-cover{
-        height: 60vh;  /* full tinggi layar */
-    }
-    /* Hero Section dengan gari s */
-    .hero {
-    position: relative;
-    width: 100vw;   /* full lebar layar */
-    height: auto;  /* full tinggi layar */
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    }
-
-    .hero .hero-decor {
-    width: 100%;
-    height: auto; /* Biarkan tinggi menyesuaikan secara otomatis */
-    object-fit: cover;
-    display: block;
-    }
-    /* Overlay text di atas garis */
-    .hero-overlay {
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-    padding: 40px 20px;
-    }
-
-    .hero-overlay img {
-    max-width: 50%;
+    /* KUNCI: Pengaturan ukuran yang responsif */
+    width: 25%; /* Lebar gambar adalah 25% dari lebar section */
+    max-width: 300px; /* Batas lebar maksimal agar tidak terlalu besar di desktop */
     height: auto;
-    display: block;
-    margin: 10px auto;
-    }
-
-
-    .hero-text {
-        max-width: 90%;
-        margin: 0 auto 15px auto;
-        display: block;
-    }
-
-    .hero-subtext {
-        max-width: 95%;
-        margin: 0 auto 20px auto;
-        display: block;
-    }
-
-    .hero-button {
-        max-width: 50%;
-        cursor: pointer;
-        transition: transform 0.2s ease;
-    }
-
-    .hero-button:hover {
-        transform: scale(1.05);
-    }
-
-
-    .about-section {
-        /* TAMBAHKAN BARIS INI */
-        min-height: 100%; /* Atur tinggi minimal 80% dari tinggi layar */
-
-        width: 100%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-
-        /* Properti Anda yang sudah ada */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 4rem 0;
-    }
-
-    /* Container yang membungkus logo dan teks */
-    .about-content {
-        display: grid;
-        
-        /* KUNCI: Buat 2 kolom dengan lebar yang sama (seimbang) */
-        grid-template-columns: 1fr 1fr; 
-        
-        /* Membuat logo dan teks sejajar di tengah secara vertikal */
-        align-items: center; 
-        
-        /* Memberi jarak 3rem antara kolom logo dan kolom teks */
-        gap: 3rem; 
-        
-        /* Opsional: Batasi lebar maksimal agar tidak terlalu renggang di layar besar */
-        max-width: 100%;
-        margin: 0 auto; /* Memposisikan seluruh grup di tengah section */
-    }
-
-    /* Kolom Kiri: Logo */
-    .about-logo {
-        /* Anda bisa tetap menggunakan position relative jika ingin efek menjorok keluar */
-        position: relative;
-        left: 40px; 
-    }
-
-    .about-logo img {
-        width: 100%;
-        height: auto;
-    }
-
-
-
-    /* Kolom Kanan: Teks */
-    .about-text {
-        flex: 0 0 60%; /* Tidak akan membesar, tidak akan menyusut, lebar dasar 60% */
-    }
-
-    .about-text-img {
-        width: 100%;
-        height: auto;
-    }
-
-
-    .divider-section {
-        line-height: 0;
-        
-        /* TAMBAHKAN BARIS INI */
-        margin-top: -50px; /* Tarik ke atas. Sesuaikan nilai 80px sesuai kebutuhan. */
-
-        /* Opsional: Tambahkan z-index jika divider tertutup elemen lain */
-        position: absolute;
-        z-index: 10;
-    }
-
-    .divider-img {
-        width: 100%;
-        height: auto;
-        
-    }
-
-    .community-section {
-        min-height: 100%;
-        background-size: cover;
-        background-position: top center;
-        background-repeat: no-repeat;
-        padding: 5rem 0;
-        text-align: center;
-    }
-
-    .community-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .poster {
-        position: absolute;
-        top: 48%;
-        max-width: 100%; /* DIUBAH: Poster dibuat sedikit lebih besar */
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-    }
-
-
-    .wizards {
-        position: absolute;
-        bottom: 20%; /* DIUBAH: Menaikkan posisi wizard ke tengah poster */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 45%; /* Slightly reduce size to match mockup */
-        z-index: 2; /* Layer 2: Di atas poster-img */
-    }
-
-    .wizards img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .poster-img {
-        position: relative; /* Menambahkan position agar z-index berfungsi */
-        z-index: 1; /* Layer 1: Menjadi lapisan dasar */
-        width: 40vh;
-        height: auto;
-        display: block;
-    }
-    .btn-row {
-        position: absolute;
-        bottom: 10%; /* Atur posisi vertikal tombol */
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 1rem; /* Mengurangi jarak antar tombol */
-        z-index: 3; /* Layer teratas */
-        width: 100%;
-        justify-content: center;
-    }
-
-    .btn-enter,
-    .btn-chart {
-        padding: 0.2rem 0.5rem; /* Mengurangi padding tombol agar lebih kecil */
-        border-radius: 8px; /* Mengurangi radius border agar lebih halus */
-        text-decoration: none;
-        font-family: var(--heading-font);
-        font-weight: 700;
-        font-size: 0.9rem; /* Ukuran font sedikit lebih kecil */
-        text-transform: uppercase;
-        transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    .btn-enter {
-        background-color: #312719;
-        color: #E2B35B;
-        border: 2px solid #E2B35B;
-    }
-
-    .btn-chart {
-        background-color: #E2B35B;
-        color: #312719;
-        border: 2px solid #E2B35B;
-    }
-
-    .btn-enter:hover,
-    .btn-chart:hover {
-        transform: scale(1.05); /* Efek zoom saat hover */
-    }
-
 }
-@media (max-height: 500px) and (orientation: landscape) {
-    .hero-cover{
-        height: 90vh;  /* full tinggi layar */
-    }
-    /* Hero Section dengan gari s */
-    .hero {
-    position: relative;
-    width: 100vw;   /* full lebar layar */
-    height: auto;  /* full tinggi layar */
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    }
 
-    .hero .hero-decor {
+.section2 .buy img {
+    /* Pastikan gambar mengisi penuh wadah .buy */
     width: 100%;
-    height: auto; /* Biarkan tinggi menyesuaikan secara otomatis */
-    object-fit: cover;
-    display: block;
-    }
-    /* Overlay text di atas garis */
-    .hero-overlay {
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-    padding: 40px 20px;
-    }
-
-    .hero-overlay img {
-    max-width: 50%;
     height: auto;
-    display: block;
-    margin: 10px auto;
-    }
+}
+/* =============================================== */
+/* ATURAN BARU UNTUK SLIDER DI SECTION 2           */
+/* =============================================== */
 
+/* Wadah utama slider (gunakan satu class yang konsisten, misal .my-slider) */
+.section2 .my-slider {
+    position: absolute;
+    
+    /* Posisi default di tengah, dari sini Anda bisa menggesernya */
+    top: 50%;
+    left: 30%;
+    transform: translate(-80%, -10%);
+    
+    /* Atur ukuran slider agar tidak terlalu besar */
+    width: auto;
+    max-width: 30vh; /* Lebar maksimal 600px di layar besar */
+    
+    /* Beri rasio aspek agar ukurannya proporsional dan tidak gepeng */
+    aspect-ratio: 33 / 23.6;
+    
+    z-index: 10;
+    border-radius: 15px; /* Opsional: membuat sudut melengkung */
+    overflow: hidden; /* Penting jika menggunakan border-radius */
+}
 
-    .hero-text {
-        max-width: 90%;
-        margin: 0 auto 15px auto;
-        display: block;
-    }
+/* Aturan untuk gambar DI DALAM setiap slide */
+.section2 .my-slider .swiper-slide img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover; /* KUNCI: Membuat gambar mengisi slide tanpa gepeng */
+}
 
-    .hero-subtext {
-        max-width: 95%;
-        margin: 0 auto 20px auto;
-        display: block;
-    }
+  /* === JUMP IMAGE === */
+.jump-image {
+    position: absolute;
+    
+    /* KUNCI: Sesuaikan angka ini untuk menaikkan/menurunkan gambar */
+    top: 65vh; 
+    
+    /* Atur posisi horizontal dari kiri */
+    left: 15%; /* Sesuaikan nilainya */
+    
+    /* Atur ukuran yang responsif */
+    width: 25vw;      /* Lebar 25% dari lebar layar */
+    max-width: 200px; /* Ukuran maksimal 200px di layar besar */
+    
+    z-index: 10;      /* Pastikan berada di lapisan paling atas */
+}
 
-    .hero-button {
-        max-width: 50%;
-        cursor: pointer;
-        transition: transform 0.2s ease;
-    }
+  /* === SECTION 3 (About) === */
+  .section3 img.w-100 {
+    height: 30vh;
+    object-fit: cover;
+    object-position: center;
+  }
 
-    .hero-button:hover {
-        transform: scale(1.05);
-    }
+  .section3 div[style*="absolute"] {
+    top: 20%;
+      left: 30%;
+    transform: translate(-30%, -50%);
+    padding: 0.5rem;
+    text-align: center;
+  }
 
-
-    .about-section {
-        /* TAMBAHKAN BARIS INI */
-        min-height: 100%; /* Atur tinggi minimal 80% dari tinggi layar */
-
-        width: 100%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-
-        /* Properti Anda yang sudah ada */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 4rem 0;
-    }
-
-    /* Container yang membungkus logo dan teks */
-    .about-content {
-        display: grid;
-        
-        /* KUNCI: Buat 2 kolom dengan lebar yang sama (seimbang) */
-        grid-template-columns: 1fr 1fr; 
-        
-        /* Membuat logo dan teks sejajar di tengah secara vertikal */
-        align-items: center; 
-        
-        /* Memberi jarak 3rem antara kolom logo dan kolom teks */
-        gap: 3rem; 
-        
-        /* Opsional: Batasi lebar maksimal agar tidak terlalu renggang di layar besar */
-        max-width: 100%;
-        margin: 0 auto; /* Memposisikan seluruh grup di tengah section */
-    }
-
-    /* Kolom Kiri: Logo */
-    .about-logo {
-        /* Anda bisa tetap menggunakan position relative jika ingin efek menjorok keluar */
-        position: relative;
-        left: 40px; 
-    }
-
-    .about-logo img {
-        width: 100%;
-        height: auto;
-    }
-
-
-
-    /* Kolom Kanan: Teks */
-    .about-text {
-        flex: 0 0 60%; /* Tidak akan membesar, tidak akan menyusut, lebar dasar 60% */
-    }
-
-    .about-text-img {
-        width: 100%;
-        height: auto;
-    }
-
-
-    .divider-section {
-        line-height: 0;
-        
-        /* TAMBAHKAN BARIS INI */
-        margin-top: -50px; /* Tarik ke atas. Sesuaikan nilai 80px sesuai kebutuhan. */
-
-        /* Opsional: Tambahkan z-index jika divider tertutup elemen lain */
-        position: absolute;
-        z-index: 10;
-    }
-
-    .divider-img {
-        width: 100%;
-        height: auto;
-        
-    }
-
-    .community-section {
-        min-height: 100vh;
-        background-size: cover;
-        background-position: top center;
-        background-repeat: no-repeat;
-        padding: 5rem 0;
-        text-align: center;
-    }
-
-    .community-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .poster {
-        position: absolute;
-        top: 79%;
-        max-width: 100%; /* DIUBAH: Poster dibuat sedikit lebih besar */
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-    }
-
-
-    .wizards {
-        position: absolute;
-        bottom: 20%; /* DIUBAH: Menaikkan posisi wizard ke tengah poster */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 45%; /* Slightly reduce size to match mockup */
-        z-index: 2; /* Layer 2: Di atas poster-img */
-    }
-
-    .wizards img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .poster-img {
-        position: relative; /* Menambahkan position agar z-index berfungsi */
-        z-index: 1; /* Layer 1: Menjadi lapisan dasar */
-        width: 80vh;
-        height: auto;
-        display: block;
-    }
-    .btn-row {
-        position: absolute;
-        bottom: 5%; /* Atur posisi vertikal tombol */
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 1rem; /* Mengurangi jarak antar tombol */
-        z-index: 3; /* Layer teratas */
-        width: 100%;
-        justify-content: center;
-    }
-
-    .btn-enter,
-    .btn-chart {
-        padding: 0.2rem 0.1rem; /* Mengurangi padding tombol agar lebih kecil */
-        border-radius: 8px; /* Mengurangi radius border agar lebih halus */
-        text-decoration: none;
-        font-family: var(--heading-font);
-        font-weight: 700;
-        font-size: 0.9rem; /* Ukuran font sedikit lebih kecil */
-        text-transform: uppercase;
-        transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    .btn-enter {
-        background-color: #312719;
-        color: #E2B35B;
-        border: 2px solid #E2B35B;
-    }
-
-    .btn-chart {
-        background-color: #E2B35B;
-        color: #312719;
-        border: 2px solid #E2B35B;
-    }
-
-    .btn-enter:hover,
-    .btn-chart:hover {
-        transform: scale(1.05); /* Efek zoom saat hover */
-    }
+  .section3 div[style*="absolute"] img {
+    max-width: 35%;
+    height: auto;
+  }
 }
